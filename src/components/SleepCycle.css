@@ -1,0 +1,79 @@
+.sleep-cycle-card {
+    display: flex;
+    flex-direction: row; /* Horizontal card layout */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sleep-cycle-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .sleep-info, .sleep-stats, .sleep-graph {
+    flex: 1; /* Distribute the content evenly */
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .sleep-info h2, .sleep-stats h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .sleep-info p, .sleep-stats p, .sleep-stats ul {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .sleep-stats ul {
+    padding-left: 20px;
+  }
+  
+  .sleep-stats li {
+    margin-bottom: 5px;
+  }
+  
+  .sleep-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .graph-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1.2rem;
+    border: 2px dashed #ccc;
+  }
+  
+  .sleep-cycle-card:hover .graph-placeholder {
+    background-color: #e0e0e0;
+  }
+  
+  /* Adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .sleep-cycle-card {
+      flex-direction: column; /* Stack the content vertically on smaller screens */
+    }
+  
+    .sleep-info, .sleep-stats, .sleep-graph {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,111 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+/* Logo styling with hover effect */
+.logo h1 {
+    color: #61dafb; /* Initial color */
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logo h1:hover {
+    color: #0077ff; /* Hover color */
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+}
+
+.hamburger .bar {
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Links container */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links li {
+    font-size: 1.2rem;
+}
+
+/* Links styling with no underline and hover effect */
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #61dafb; /* Hover color */
+}
+
+/* Sign Out button style */
+.sign-btn a {
+    background-color: #61dafb;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.sign-btn a:hover {
+    background-color: #4db7f2; /* Hover background color */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        flex-direction: row;
+        position: static;
+        display: flex;
+    }
+}

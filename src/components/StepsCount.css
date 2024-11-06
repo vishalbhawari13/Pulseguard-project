@@ -1,0 +1,71 @@
+.steps-card {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+  }
+  
+  .steps-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .steps-info, .steps-stats, .steps-graph {
+    flex: 1; /* Distribute content evenly */
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .steps-info h2, .steps-stats h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .steps-info p, .steps-stats p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .steps-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .graph-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1.2rem;
+    border: 2px dashed #ccc;
+  }
+  
+  .steps-card:hover .graph-placeholder {
+    background-color: #e0e0e0;
+  }
+  
+  /* Adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .steps-card {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+  
+    .steps-info, .steps-stats, .steps-graph {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

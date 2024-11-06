@@ -1,0 +1,76 @@
+.card {
+    display: flex;
+    flex-direction: row; /* Horizontal card layout */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pulse-info, .pulse-stats, .pulse-graph {
+    flex: 1; /* Distribute the content evenly */
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .pulse-info h2, .pulse-stats h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .pulse-info p, .pulse-stats p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .pulse-stats span {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .pulse-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .graph-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1.2rem;
+    border: 2px dashed #ccc;
+  }
+  
+  .card:hover .graph-placeholder {
+    background-color: #e0e0e0;
+  }
+  
+  /* Adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column; /* Stack the content vertically on smaller screens */
+    }
+  
+    .pulse-info, .pulse-stats, .pulse-graph {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
